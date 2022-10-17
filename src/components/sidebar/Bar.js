@@ -29,7 +29,7 @@ const Sidebar = ({ activeTab,
 
             <div className={openSidebar ? 'sidebar_content opened' : 'sidebar_content'}>
                 <button className='close' onClick={closeTheSidebar}><Close /></button>
-                <TabNavItem title='Dashboard' id='board' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />
+                <TabNavItem title='Dashboard' id='dashboard' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />
                 <TabNavItem title='Add team member' id='addTeamMember' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />
                 <TabNavItem title='Call Team' id='callTeam' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />
                 <TabNavItem title='Chat' id='chat' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />

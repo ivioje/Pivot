@@ -12,7 +12,7 @@ const App = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('board');
+  const [activeTab, setActiveTab] = useState('dashboard');
   const [openSidebar, setOpenSidebar] = useState(false);
 
   const open = Boolean(anchorEl);

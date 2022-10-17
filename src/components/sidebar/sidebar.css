@@ -1,0 +1,107 @@
+.sidebar_content{
+    display: flex;
+    flex-flow: column wrap;
+    width: 350px;
+    padding: 4rem 3rem;
+    left: 0px;
+    top: 70px;
+
+    background: #EEF3F9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 10px 0px;
+    position: fixed;
+    z-index: -1;
+}
+
+.sidebar_content>* {
+    padding: .7rem;
+}
+
+.sidebar_content p {
+    display: flex;
+    align-items: center;
+    color: #868484;
+    cursor: pointer;
+}
+
+.sidebar_content p>* {
+    margin: .5rem;
+    display: flex;
+}
+
+.support {
+    margin: 4rem 0rem 2rem 0rem;
+    font-weight: 700;
+    color: #121212;
+    display: flex;
+}
+.support >*{
+    margin: .5rem;
+}
+
+.tabs_view {
+    display: flex;
+    position: relative;
+}
+.active {
+    background: linear-gradient(180deg, #0D7DEC 0%, #03045E 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+.outlet {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: auto;
+    z-index: -2; 
+    width: 70vw;
+}
+.openArrow, .close {
+    display: none;
+}
+@media screen and (max-width: 1090px) {
+    .sidebar_content{
+        display: none;
+        width: auto;
+    }
+    .outlet {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .opened {
+        display: block;
+    }
+    .openArrow {
+        display: block;
+        border: 0;
+        height: 40px;
+        width: 40px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #0D7DEC 0%, #03045E 100%) !important;
+        cursor: pointer;
+        top: 90px;
+        position: absolute;
+        z-index: -1;
+        color: #fff;
+        font-size: 20px;
+    }
+    .close {
+        display: block;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: 0;
+        float: right;
+        margin-top: -30px;
+        cursor: pointer;
+    }
+    
+    
+}

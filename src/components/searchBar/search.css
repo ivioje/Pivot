@@ -1,0 +1,16 @@
+.searchbar {
+    background: rgba(196, 196, 196, 0.37);
+    box-shadow: 0px 30px 50px rgba(229, 229, 229, 0.1);
+    border-radius: 5px;
+    height: 60px;
+    width: 100%;
+    border: 1px solid rgba(196, 196, 196, 0.37);
+    width: 410px;
+}
+
+input::placeholder {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(18, 18, 18, 0.44);
+    padding-left: 1rem;
+}

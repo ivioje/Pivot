@@ -1,0 +1,45 @@
+.tools_container {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-top: 10px;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 20px !important;
+    position: relative;
+    margin: 15px;
+    width: 270px;
+    border-radius: 20px 0px 20px 20px;
+    box-shadow: 0px 0px 4px 4px rgba(228, 228, 228, 0.25);
+}
+.tools p {
+    font-size: 25px;
+    font-weight: 700;
+}
+.tools >* {
+    margin: 0rem 0rem .6rem 1rem;
+}
+.tools div{
+    width: 70px;
+    height: 70px;
+}
+.tools div img {
+    width: 70px;
+    height: 70px;
+}
+.add_btn {
+    width: auto !important;
+    height: 20px !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px !important;
+    cursor: pointer;
+}

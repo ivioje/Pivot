@@ -1,9 +1,6 @@
 .navigation {
     height: 80px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     padding: 0.5rem 0rem;
     background-color: #EEF3F9;
@@ -28,9 +25,6 @@
 }
 
 .navigation-menu ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0;
 }
 
@@ -47,7 +41,7 @@
     border-radius: 50%;
     background: linear-gradient(180deg, #0D7DEC 0%, #03045E 100%) !important;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
     position: absolute;
     top: 50%;
     right: 25px;
@@ -85,11 +79,11 @@
 
     .navigation-menu ul {
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         flex-direction: column;
         width: 100%;
-        height: calc(100vh - 77px);
+        height: auto;
         background-color: white;
     }
 
@@ -110,8 +104,10 @@
 
     .navigation-menu.expanded ul {
         display: block;
-        height: 200px;
+        height: auto;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        padding: 2rem 0rem;
     }
 
 }

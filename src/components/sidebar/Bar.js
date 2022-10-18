@@ -16,19 +16,20 @@ import TabContent from '../TabContents/TabContent';
 
 const Sidebar = ({ activeTab,
     setActiveTabId,
-    open,
+    open, tools,
     setOpen,
     handleClose,
     handleOpen,
     openTheSidebar,
     openSidebar,
-    closeTheSidebar }) => {
+    closeTheSidebar,
+    addToolsToDashboard }) => {
     return (
         <div className='tabs_view'>
             <ToggleSidebar onClick={openTheSidebar} showSideBar={openSidebar} />
 
             <div className={openSidebar ? 'sidebar_content opened' : 'sidebar_content'}>
-                <button className='close' onClick={closeTheSidebar}><Close /></button>
+                <button className='close center' onClick={closeTheSidebar}><Close /></button>
                 <TabNavItem title='Dashboard' id='dashboard' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />
                 <TabNavItem title='Add team member' id='addTeamMember' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />
                 <TabNavItem title='Call Team' id='callTeam' activeTab={activeTab} setActiveTabId={setActiveTabId} close={closeTheSidebar} />
@@ -41,13 +42,16 @@ const Sidebar = ({ activeTab,
                 </div>
             </div>
 
-            <div className='outlet'>
-                <TabContent id='board' activeTab={activeTab}>
+            <div className='outlet center'>
+                <TabContent id='dashboard' activeTab={activeTab}>
                     <Dashboard
                         open={open}
+                        tools={tools}
                         setOpen={setOpen}
                         handleOpen={handleOpen}
+                        closeTheSidebar={closeTheSidebar}
                         handleClose={handleClose}
+                        addToolsToDashboard={addToolsToDashboard}
                     />
                 </TabContent>
                 <TabContent id='addTeamMember' activeTab={activeTab}>

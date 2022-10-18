@@ -7,7 +7,7 @@ import './nav.css'
 
 const Nav = ({ isNavExpanded, setIsNavExpanded, id, handleClick, open, anchorEl }) => {
     return (
-        <nav className="navigation">
+        <nav className="navigation center">
             <a href="/" className="brand-name">
                 PIVOT
             </a>
@@ -28,12 +28,17 @@ const Nav = ({ isNavExpanded, setIsNavExpanded, id, handleClick, open, anchorEl 
                 </svg>
             </button>
             <div className={isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}>
-                <ul>
+                <ul className='between'>
                     <li>
                         <div><Search /> </div>
                     </li>
                     <li>
-                        <div><TeamDetails id={id} handleClick={handleClick} open={open} anchorEl={anchorEl} /></div>
+                        <div className='pa'>
+                            <TeamDetails id={id}
+                                handleClick={handleClick}
+                                open={open}
+                                anchorEl={anchorEl} />
+                        </div>
                     </li>
                     <li>
                         <a href="/notifications"><NotificationsOutlined /></a>

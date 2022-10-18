@@ -7,6 +7,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    color: #121212;
+    color: #2c2b2b;
     overflow-x: hidden;
+    min-width: 275px !important;
 }

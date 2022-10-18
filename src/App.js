@@ -14,6 +14,7 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [tools, setTools] = useState([])
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popper' : undefined;
@@ -31,6 +32,14 @@ const App = () => {
 
   const openTheSidebar = () => setOpenSidebar(true)
   const closeTheSidebar = () => setOpenSidebar(false)
+
+  const addToolsToDashboard = (photo, name) => {
+    setTools([...tools, {
+      id: tools.length,
+      photo: photo,
+      name: name
+    }])
+  }
 
 
   return (
@@ -53,6 +62,8 @@ const App = () => {
         openTheSidebar={openTheSidebar}
         openSidebar={openSidebar}
         closeTheSidebar={closeTheSidebar}
+        addToolsToDashboard={addToolsToDashboard}
+        tools={tools}
         />
           
         

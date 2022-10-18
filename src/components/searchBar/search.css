@@ -3,8 +3,7 @@
     box-shadow: 0px 30px 50px rgba(229, 229, 229, 0.1);
     border-radius: 5px;
     height: 60px;
-    width: 100%;
-    border: 1px solid rgba(196, 196, 196, 0.37);
+    border: 0;
     width: 410px;
 }
 
@@ -12,5 +11,15 @@ input::placeholder {
     font-weight: 600;
     font-size: 16px;
     color: rgba(18, 18, 18, 0.44);
+}
+input {
     padding-left: 1rem;
+    color: #12121270;
+    font-weight: 600;
+    font-size: 16px;
+}
+@media screen and (max-width: 500px) {
+    .searchbar {
+        width: 100%;
+    }
 }

@@ -15,19 +15,21 @@ const style = {
     width: '80%',
     height: '500px',
     bgcolor: 'background.paper',
-    border: '2px solid #bbb',
+    border: 0,
     boxShadow: 24,
     p: 4,
     overflowY: 'scroll'
 };
 
 
-const AddTools = ({ open, handleClose, handleOpen }) => {
+const AddTools = ({ open, tools, handleClose, handleOpen, addToolsToDashboard }) => {
 
+// console.log(data.tools.map(item => item.id) === tools.id)
+// console.log(tools.id);
 
     return (
         <div>
-            <button onClick={handleOpen} className='add'><Add /> Add tools</button>
+            <button onClick={handleOpen} className='add center'><Add /> Add tools</button>
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
@@ -43,14 +45,14 @@ const AddTools = ({ open, handleClose, handleOpen }) => {
                     <Box sx={style}>
 
                         <div>
-                            <h4>Add tools you use regularly to your dashboard.</h4>
+                            <h4 style={{opacity: '.9'}}>Add tools you use regularly to your dashboard.</h4>
                             <div className='tools_container'>
                                 {data.tools.map(({ id, name, photo }) => {
                                     return (
                                         <div key={id} className='tools'>
                                             <div><img src={photo} alt={name} /></div>
                                             <p>{name}</p>
-                                            <button className='add add_btn'>Add tool</button>
+                                            <button onClick={() => addToolsToDashboard(photo, name)} className='add add_btn center'>Add tool</button>
                                         </div>
                                     )
                                 })}

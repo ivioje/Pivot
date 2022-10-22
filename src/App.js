@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 //import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTachometerAltFast } from '@fortawesome/free-solid-svg-icons'
 import Sidebar from './components/sidebar/Bar';
 
-library.add(faTachometerAltFast)
 
 const App = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -43,17 +40,17 @@ const App = () => {
 
 
   return (
-      <div className="App">
-        <Nav
-          isNavExpanded={isNavExpanded}
-          setIsNavExpanded={setIsNavExpanded}
-          id={id}
-          handleClick={handleClick}
-          open={open}
-          anchorEl={anchorEl}
-        />
-        <Sidebar
-        open={isOpen} 
+    <div className="App">
+      <Nav
+        isNavExpanded={isNavExpanded}
+        setIsNavExpanded={setIsNavExpanded}
+        id={id}
+        handleClick={handleClick}
+        open={open}
+        anchorEl={anchorEl}
+      />
+      <Sidebar
+        open={isOpen}
         setOpen={setIsOpen}
         handleOpen={handleOpen}
         handleClose={handleClose}
@@ -64,10 +61,10 @@ const App = () => {
         closeTheSidebar={closeTheSidebar}
         addToolsToDashboard={addToolsToDashboard}
         tools={tools}
-        />
-          
-        
-      </div>
+      />
+
+
+    </div>
   );
 }
 

@@ -13,6 +13,8 @@ import './sidebar.css';
 import TabNavItem from '../TabContents/TabNavItem';
 import Dashboard from '../TabContents/tabs/dashboard/Dashboard';
 import TabContent from '../TabContents/TabContent';
+import AddTeamMember from '../TabContents/tabs/addTeamMember/AddTeamMember';
+import CallTeam from '../TabContents/tabs/callTeam/CallTeam';
 
 const Sidebar = ({ activeTab,
     setActiveTabId,
@@ -23,7 +25,11 @@ const Sidebar = ({ activeTab,
     openTheSidebar,
     openSidebar,
     closeTheSidebar,
-    addToolsToDashboard }) => {
+    addToolsToDashboard,
+    videoCall,
+    setVideoCall,
+    rtcProps,
+    callbacks }) => {
     return (
         <div className='tabs_view'>
             <ToggleSidebar onClick={openTheSidebar} showSideBar={openSidebar} />
@@ -55,10 +61,15 @@ const Sidebar = ({ activeTab,
                     />
                 </TabContent>
                 <TabContent id='addTeamMember' activeTab={activeTab}>
-                    <p>add team member</p>
+                    <AddTeamMember />
                 </TabContent>
                 <TabContent id='callTeam' activeTab={activeTab}>
-                    <p>call team</p>
+                    <CallTeam
+                        videoCall={videoCall}
+                        setVideoCall={setVideoCall}
+                        rtcProps={rtcProps}
+                        callbacks={callbacks}
+                    />
                 </TabContent>
                 <TabContent id='chat' activeTab={activeTab}>
                     <p>chat</p>

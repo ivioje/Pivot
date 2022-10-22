@@ -11,3 +11,9 @@
 .pa {
     padding: 1rem;
 }
+button {
+    cursor: pointer;
+}
+.tc {
+    text-align: center;
+}

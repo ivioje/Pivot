@@ -33,8 +33,8 @@ const Dashboard = ({
                 </div>
                 <h4>Current tools</h4>
                 {tools.length === 0 ?
-                    <NoTools /> :
-                    <AddedTools tools={tools} />
+                   ( <NoTools />) :
+                    (<AddedTools tools={tools} />)
                 }
 
             </div>

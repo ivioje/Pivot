@@ -15,6 +15,8 @@ import Dashboard from '../TabContents/tabs/dashboard/Dashboard';
 import TabContent from '../TabContents/TabContent';
 import AddTeamMember from '../TabContents/tabs/addTeamMember/AddTeamMember';
 import CallTeam from '../TabContents/tabs/callTeam/CallTeam';
+import { Link } from 'react-router-dom';
+import TeamChat from '../TabContents/tabs/chat/Chat';
 
 const Sidebar = ({ activeTab,
     setActiveTabId,
@@ -72,7 +74,7 @@ const Sidebar = ({ activeTab,
                     />
                 </TabContent>
                 <TabContent id='chat' activeTab={activeTab}>
-                    <p>chat</p>
+                    <TeamChat />
                 </TabContent>
                 <TabContent id='updateProfile' activeTab={activeTab}>
                     <p>update profile</p>
